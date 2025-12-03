@@ -1,6 +1,6 @@
-using ATLabDataVisualization
+using VisualizeATLabData
 using Test
 
-@testset "ATLabDataVisualization.jl" begin
+@testset "VisualizeATLabData.jl" begin
     # Write your tests here.
 end
