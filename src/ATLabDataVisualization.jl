@@ -2,12 +2,12 @@ module ATLabDataVisualization
 
 using GLMakie
 using ATLabData
-using NetCDF
+# using NetCDF
 using ImageFiltering
 using ForwardDiff
 using Interpolations
 
-export visualize, animate
+export visualize, animate, heatmap
 export theme_article, theme_talk
 
 include("THEMES.jl")
