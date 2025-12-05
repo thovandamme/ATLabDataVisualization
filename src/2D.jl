@@ -8,8 +8,7 @@ function heatmap(
         data::ScalarData;
         slice::Int = 1, 
         sizex::Int = 1000,
-        # colormap=:RdGy,
-        colormap=:viridis,
+        colormap=:RdGy,
         colorrange_max = maximum(data.field),
         colorrange_min = minimum(data.field),
         colorrange=(minimum(data.field),maximum(data.field)),
@@ -30,10 +29,6 @@ function heatmap(
     printstyled("   $(data.name) \n", color=:cyan)
     sizez = round(Int32, data.grid.scalez/data.grid.scalex*sizex)    
     printstyled("   Backend: GLMakie \n", color=:light_black)
-    
-    GLMakie.activate!()
-    
-    set_theme!(theme_talk())
     
     fig = Figure(size=(sizex, sizez))
     ax = Axis(
